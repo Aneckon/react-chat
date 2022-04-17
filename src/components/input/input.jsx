@@ -11,7 +11,6 @@ export const Input = ({ messagesRef }) => {
 
   const onKeyEnter = (e) => {
     if (messagesInput.length && messagesInput.indexOf(' ') && e.key === 'Enter') {
-      e.preventDefault()
       dispatch(setMessages(messagesInput));
       setTimeout(() => {
         messagesRef.current.scrollIntoView();
